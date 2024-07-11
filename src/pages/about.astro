@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Tentang Waralaba Online</Fragment>
+      <Fragment slot="desc">Menghubungkan Potensi dengan Kesuksesan</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Membuka Peluang Bisnis Melalui Waralaba
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Waralaba Online adalah platform yang didedikasikan untuk membantu calon pengusaha menemukan dan mengembangkan bisnis dengan konsep waralaba yang terbukti berhasil. Kami menghubungkan potensi wirausaha dengan kesempatan untuk meraih kesuksesan dalam bisnis mereka.
+      </p>
+    </div>
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Visi
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        Menjadi platform terkemuka yang menyediakan akses mudah dan terpercaya untuk memulai dan mengembangkan bisnis melalui konsep waralaba, membantu setiap pengusaha mencapai kesuksesan dalam bisnis mereka.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Misi
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        - Menyediakan berbagai pilihan waralaba terbaik yang telah teruji kualitasnya.<br>
+        - Memberikan dukungan komprehensif dalam proses pendirian bisnis dan pengembangannya.<br>
+        - Mendorong inovasi dan pertumbuhan berkelanjutan bagi para mitra bisnis kami.<br>
+        - Memastikan kualitas layanan dan kepuasan pelanggan yang tinggi.
+      </p>
+    </div>
+  </Container>
+</Layout>

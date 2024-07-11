@@ -1,0 +1,170 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import BrandCard from "@components/brand-card.astro"; // Ubah ke komponen brand
+
+
+import heroImageA from "assets/brand-a.png";
+import heroImageB from "assets/brand-b.png";
+import heroImageC from "assets/brand-c.png";
+import heroImageD from "assets/brand-d.png";
+import heroImageE from "assets/brand-e.png";
+import heroImageF from "assets/brand-f.png";
+import heroImageG from "assets/brand-g.png";
+import heroImageH from "assets/brand-h.png";
+import heroImageI from "assets/brand-i.png";
+
+const brands = [
+  {
+    name: "Alfamart",
+    description: "Alfamart",
+    features: [
+      "Pertumbuhan yang Pesat",
+      "Dukungan Menyeluruh",
+      "Kemudahan Operasional",
+      "Teruji dan Terpercaya",
+    ],
+    image: heroImageA,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AAlfamart%2A",
+    },
+  },
+  {
+    name: "Indomaret",
+    description: "Indomaret",
+    features: [
+      "Pertumbuhan yang Pesat",
+      "Dukungan Menyeluruh",
+      "Kemudahan Operasional",
+      "Teruji dan Terpercaya",
+    ],
+    image: heroImageB,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AIndomaret%2A",
+    },
+  },
+  {
+    name: "Apotek K-24",
+    description: "Apotek K-24",
+    features: [
+      "Dukungan Operasional",
+      "Akses ke Pasokan & Produk",
+      "Dukungan marketing",
+      "Sistem operasional efisien",
+    ],
+    image: heroImageC,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AApotek%20K-24%2A%0A%0A",
+    },
+  },
+  {
+    name: "Kopi Kenangan",
+    description: "Kopi Kenangan",
+    features: [
+      "Inovasi Produk",
+      "Dukungan Awal & Pelatihan",
+      "Dukungan marketing",
+      "Sistem Operasional",
+    ],
+    image: heroImageD,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AKopi%20Kenangan%2A%0A%0A",
+    },
+  },
+  {
+    name: "Mie Gacoan",
+    description: "Mie Gacoan",
+    features: [
+      "Sistem Operasional",
+      "Produk & Menu yang Dikenal",
+      "Dukungan operasional",
+      "Sistem Operasional & Pelatihan",
+    ],
+    image: heroImageE,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AMie%20Gacoan%2A",
+    },
+  },
+  {
+    name: "Arah Kopi",
+    description: "Arah Kopi",
+    features: [
+      "Sistem Operasional",
+      "Dukungan operasional",
+      "Pelatihan & Pengembangan Karyawan",
+      "Inovasi Produk & Menu",
+    ],
+    image: heroImageF,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AArah%20Kopi%2A%0A%0A",
+    },
+  },
+  {
+    name: "Kopi Janji Jiwa",
+    description: "Kopi Janji Jiwa",
+    features: [
+      "Dukungan dalam Pendirian Gerai",
+      "Pelatihan & Dukungan Operasional",
+      "Dukungan Pemasaran & Promosi",
+      "Peluang ekspansi",
+    ],
+    image: heroImageG,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AJanji%20Jiwa%2A%0A%0A",
+    },
+  },
+  {
+    name: "Captain Barbershop",
+    description: "Captain Barbershop",
+    features: [
+      "Pelatihan untuk Pemilik & Karyawan",
+      "Dukungan penuh",
+      "Dukungan Pemasaran & Branding",
+      "Jaringan luas",
+    ],
+    image: heroImageH,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2ACaptain%20Barbershop%2A",
+    },
+  },
+  {
+    name: "Mixue",
+    description: "Mixue",
+    features: [
+      "Dukungan Marketing",
+      "Jaringan kuat",
+      "Dukungan pemasaran",
+      "Produk berkualitas",
+    ],
+    image: heroImageI,
+    button: {
+      text: "Pelajari Lebih Lanjut",
+      link: "https://api.whatsapp.com/send?phone=6285211479034&text=Halo%20Admin%20%2AWaralaba%20Online%2A%20%2C%20saya%20ingin%20berkonsultasi%20mengenai%20waralaba%20brand%20%2AMixue%2A%0A%0A",
+    },
+  },
+];
+---
+
+<Layout title="Brand Waralaba">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Brand Waralaba Terkenal</Fragment>
+      <Fragment slot="desc">
+        Temukan berbagai peluang bisnis waralaba terbaik dan terpercaya.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {brands.map((item) => <BrandCard brand={item} />)}
+    </div>
+  </Container>
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Contactform from "@components/contactform.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Hubungi Kami</Fragment>
+      <Fragment slot="desc">Kami siap membantu Anda.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Informasi Kontak</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          Ada sesuatu yang ingin Anda sampaikan? Kami siap membantu. Isi formulir di bawah ini atau hubungi kami melalui email atau telepon.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Jl. Duren Sawit Raya, Jakarta Timur, DKI Jakarta, 13470</span>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" />
+            <a href="mailto:info@waralabaonline.com">info@waralabaonline.com</a>
+          </div>
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:phone" />
+            <a href="tel:+62 852 1147 9034">+62 852 1147 9034</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+</Layout>

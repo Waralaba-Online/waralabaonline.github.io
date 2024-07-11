@@ -1,0 +1,68 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+
+const features = [
+  {
+    title: "Pilihan Franchise Terlengkap",
+    description:
+      "Kami menawarkan berbagai pilihan franchise dari berbagai industri, mulai dari makanan dan minuman hingga jasa dan ritel, yang siap membantu Anda meraih kesuksesan bisnis.",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Informasi Transparan dan Terperinci",
+    description:
+      "Dapatkan informasi lengkap dan akurat mengenai setiap franchise, termasuk biaya investasi, persyaratan, dan potensi keuntungan, sehingga Anda dapat membuat keputusan yang tepat.",
+    icon: "bx:bxs-info-circle",
+  },
+  {
+    title: "Layanan Konsultasi dan Dukungan",
+    description:
+      "Tim ahli kami siap memberikan konsultasi dan dukungan penuh untuk membantu Anda memilih dan mengelola franchise yang sesuai dengan minat dan kebutuhan Anda.",
+    icon: "bx:bxs-help-circle",
+  },
+  {
+    title: "Kalkulator Investasi",
+    description:
+      "Gunakan kalkulator investasi kami untuk menghitung perkiraan biaya yang dibutuhkan untuk memulai franchise pilihan Anda. Dapatkan gambaran jelas mengenai biaya awal, biaya operasional, dan potensi penghasilan.",
+    icon: "bx:bxs-calculator",
+  },
+  {
+    title: "Jaringan Komunitas Pengusaha",
+    description:
+      "Bergabunglah dengan komunitas pengusaha franchise kami untuk berbagi wawasan, pengalaman, dan tips dari sesama pemilik bisnis, memperluas jaringan dan peluang kolaborasi.",
+    icon: "bx:bxs-network-chart",
+  },
+  {
+    title: "Dukungan Pelanggan 24/7",
+    description:
+      "Kami menyediakan dukungan pelanggan yang responsif dan profesional, siap membantu Anda kapan saja. Tim kami siap menjawab pertanyaan Anda dan memberikan solusi atas masalah yang Anda hadapi dengan cepat dan efisien.",
+    icon: "bx:bx-support",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Solusi Komprehensif untuk Kesuksesan Franchise Anda
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Waralaba Online menyediakan semua fitur yang Anda butuhkan untuk memulai dan mengembangkan bisnis franchise Anda dengan sukses dan efisien.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
