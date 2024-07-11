@@ -6,7 +6,6 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://waralabaonline.github.io",
+  site: "https://waralabaonline.com",
   integrations: [tailwind(), mdx(), sitemap(), icon()],
-  base: "juliversamuel"
 });
